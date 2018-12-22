@@ -1,0 +1,22 @@
+
+I was facing same problem, here is what I did that worked for me.
+
+Use ssh instead of http. Remove origin if its http.
+
+git remote rm origin
+Add ssh url
+
+git remote add origin git@github.com:<username>/<repo>.git
+Generate ssh key inside .ssh/ folder. It will ask for path and passphrase where you can just press enter and proceed.
+
+cd ~/.ssh
+ssh-keygen
+Copy the key. You can view your key using. If you hadn't specified a different path then this is the default one.
+
+cat ~/.ssh/id_rsa.pub
+Add this key to your github account. Next do
+
+ssh -T git@github.com
+You will get a welcome message in your console.
+
+cd into to your project folder. git push -u origin master now works!
