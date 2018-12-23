@@ -12,6 +12,10 @@ print(sum_Jan.head())
 print(sum_Feb.head())
 
 diff=sum_Jan['sum'] - sum_Feb['sum']
-print(diff.head())
+print("*************************************DIFFRENCE IN SALES")
 sorted_by_diff = diff.sort_values(by=["quantity"])
 print(sorted_by_diff.head())
+jansd=Jansales.groupby('name')['unit price'].std()
+print("STD ON UNITPRICE PER PRODUCT ********************************")
+jansd=jansd.sort_values(ascending=False)
+print(jansd)
