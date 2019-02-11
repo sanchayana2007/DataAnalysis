@@ -20,3 +20,11 @@ ssh -T git@github.com
 You will get a welcome message in your console.
 
 cd into to your project folder. git push -u origin master now works!
+
+
+
+New file Commits :
+***************************
+git add .
+git commit -m "excell DA"
+git push origin master
