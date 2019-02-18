@@ -34,15 +34,4 @@ sd(df$unit.price)
 #Variance
 var(df$unit.price)
 
-#Apply sam function to diff columns
-apply(df[,c[1,2]],MARGIN = 2,FUN = sd)
-
-#Function of useful for repetitive 
-#provide the differnce between max , min values for 
-mmdiff=function(df){
-  apply(df,MARGIN = 2,function(x){max(x)-min(x)})
-}
-
-mmdiff(df[,c(5,6)])
-
 
